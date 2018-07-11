@@ -221,7 +221,7 @@ class CrudNguyenHoang extends Command
      */
     protected function getStub($type)
     {
-        return file_get_contents(resource_path("stubs/$type.stub"));
+        return file_get_contents("vendor/nguyenhoang/nhgenerator/src/resources/stubs/$type.stub");
     }
 
     /**
