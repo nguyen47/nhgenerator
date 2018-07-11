@@ -1,0 +1,21 @@
+{
+    "name": "nguyenhoang/nhgenerator",
+    "description": "Simple Generator of CRUD include Controller, Model, View and Route features.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nguyen Hoang",
+            "email": "hoangtrankhoinguyen@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "laravelcollective/html": "~5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "NguyenHoang\\NhGenerator\\": "src/"
+        }
+    }
+}

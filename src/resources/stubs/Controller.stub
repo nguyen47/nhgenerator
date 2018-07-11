@@ -1,0 +1,58 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\{{modelName}};
+
+class {{modelName}}Controller extends Controller
+{
+    public function index()
+    {
+        ${{modelNamePluralLowerCase}} = {{modelName}}::latest()->get();
+
+        return view('{{modelNamePluralLowerCase}}.index', compact('{{modelNamePluralLowerCase}}'));
+    }
+
+    public function create(){
+        return view('{{modelNamePluralLowerCase}}.create');
+    }
+
+    public function store({{modelName}}Request $request)
+    {
+        ${{modelNameSingularLowerCase}} = {{modelName}}::create($request->all());
+
+        return redirect()->route('{{modelNamePluralLowerCase}}.index');
+    }
+
+    public function show($id)
+    {
+        ${{modelNameSingularLowerCase}} = {{modelName}}::findOrFail($id);
+        
+        return view('{{modelNamePluralLowerCase}}.show', compact('{{modelNameSingularLowerCase}}'));
+    }
+
+    public function edit($id)
+    {
+        ${{modelNameSingularLowerCase}} = {{modelName}}::findOrFail($id);
+        return view('{{modelNamePluralLowerCase}}.edit', compact('{{modelNameSingularLowerCase}}'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        ${{modelNameSingularLowerCase}} = {{modelName}}::findOrFail($id);
+        ${{modelNameSingularLowerCase}}->update($request->all());
+
+        return redirect()->route('{{modelNamePluralLowerCase}}.index');
+    }
+
+    public function destroy($id)
+    {
+
+        ${{modelNameSingularLowerCase}} = {{modelName}}::findOrFail($id);
+        ${{modelNameSingularLowerCase}}->delete();
+
+        return response()->json(${{modelNameSingularLowerCase}});
+    }
+}
