@@ -1,13 +1,13 @@
 <?php 
 namespace NguyenHoang\NhGenerator;
 
-use Illumiate\Support\ServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
 class NhGeneratorServiceProvider extends ServiceProvider
 {
 	public function boot()
 	{
-		$this->commands(['NhGenerator\Console\Commands\CrudNguyenHoang']);
+		$this->commands([Console\Commands\CrudNguyenHoang::class]);
 	}
 
 	public function register()

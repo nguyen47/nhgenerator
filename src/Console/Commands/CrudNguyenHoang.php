@@ -1,6 +1,6 @@
 <?php
 
-namespace NhGenerator\Console\Commands;
+namespace NguyenHoang\NhGenerator\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
