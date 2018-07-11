@@ -10,9 +10,7 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {
-        "laravelcollective/html": "~5.0"
-    },
+    "require": {},
     "autoload": {
         "psr-4": {
             "NguyenHoang\\NhGenerator\\": "src/"
