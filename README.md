@@ -35,10 +35,10 @@ Finally, add two class aliases to the aliases array of config/app.php:
  The Second things to need to do is clone the Admin SB2 to create the templates. I don't want to include all these css, js because it's not necessary. Please following the step.
 
  ```
-git clone https://github.com/BlackrockDigital/startbootstrap-sb-admin-2.git
+git clone https://github.com/nguyen47/assets.git
  ``` 
 
-Then copy the html and css assets into the folder public/assets/admin.
+Then copy the assets folder from github into the folder public folder of Laravel.
 
 *Please copy exactly the folder*
 
